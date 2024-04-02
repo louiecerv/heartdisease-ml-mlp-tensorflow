@@ -31,11 +31,11 @@ def app():
         st.session_state.dataset_ready = False 
 
     text = """Three-way comparison of ML Classifiers, MLP and Tensorflow Artificial Neural Networks on the Heart Disease Dataset"""
-    st.subheader(text)
+    st.header(text)
 
-    text = """Louie F. Cervantes, M. Eng. (Information Engineering) \n
+    text = """Prof. Louie F. Cervantes, M. Eng. (Information Engineering) \n
     CCS 229 - Intelligent Systems
-    Computer Science Department
+    Department of Computer Science
     College of Information and Communications Technology
     West Visayas State University"""
     st.text(text)
