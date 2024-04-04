@@ -63,7 +63,7 @@ def app():
     options = ["adam", "adagrad", "sgd"]
     optimizer = st.sidebar.selectbox('Select the optimizer:', options)
 
-    n_layers = st.sidebar.slider(      
+    n_neurons = st.sidebar.slider(      
         label="Number of Neurons in the Hidden Layer:",
         min_value=5,
         max_value=15,
@@ -81,7 +81,7 @@ def app():
 
     # Define the neural network model
     model = keras.Sequential([
-        layers.Dense(10, activation=h_activation, input_shape=(X_train.shape[1],)),
+        layers.Dense(n_neurons, activation=h_activation, input_shape=(X_train.shape[1],)),
         layers.Dense(5, activation=h_activation),
         layers.Dense(1, activation=o_activation),
     ])
